@@ -12,13 +12,15 @@ import interceptors from '@services/api/interceptors'
 // Components
 import Navigation from "@navigation/Navigation";
 
+const BARSTYLE_COLOR = Platform.OS === 'ios' ? 'dark' : 'light';
+
 export default function App() {	
 	return (
 		<NavigationContainer>
 			<Provider store={store}>
 				<PersistGate persistor={persistor}>
 					<NativeBaseProvider theme={theme}>
-						<StatusBar translucent={true} backgroundColor={theme.colors.primary['500']} barStyle={'light-content'} />
+						<StatusBar translucent={true} backgroundColor={theme.colors.primary['500']} barStyle={`${BARSTYLE_COLOR}-content`} />
 						<Navigation />
 					</NativeBaseProvider>
 				</PersistGate>
