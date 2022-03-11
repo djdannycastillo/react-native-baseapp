@@ -1,5 +1,7 @@
 apply plugin: "com.android.application"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle" // <- Added because of plugin react-native-config: 1.4.5
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" // <- Added because of plugin react-native-vector-icons: 9.1.0
+
 
 import com.android.build.OutputFile
 
