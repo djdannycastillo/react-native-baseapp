@@ -66,6 +66,7 @@ See the `/app/utils/constants/config.js` file to add your `API_URL` and `EXTERNA
 ### Backend
 
 See the `/app/services/api/index.js` file to modify headers that use to connect to the backend.
+
 See the `/app/services/api/interceptors.js` file to modify auth headers that use to request user's information.
 
 Important: The project is not based on specific backend technology, it uses two headers to connect to api but you can configure depending your backend. Aditional, when users login succesfully, a `sessionToken` is created which is sent through header to request user's information
