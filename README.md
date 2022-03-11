@@ -43,7 +43,8 @@ $ run start ios
 
 ### Icon app
 
-See the ```iconset.config.js``` file to modify image paths. By default, the images are in `app/assets`: `icon.png`, `background.png`, `foreground.png`
+See the ```iconset.config.js``` file to modify image paths. By default, the images are in `app/assets`.
+Images: `icon.png`, `background.png`, `foreground.png`
 
 ```bash
 # Install Icon Set Creator
@@ -60,12 +61,20 @@ See the `/app/utils/constants/theme.js` file to modify colors and others. More d
 
 ### URL
 
-See the `/app/utils/constants/config.js` file to add your `API URL` and `EXTERNAL URL` (to request other files)
+See the `/app/utils/constants/config.js` file to add your `API_URL` and `EXTERNAL_URL` (to request other files)
+
+### Backend
+
+See the `/app/services/api/index.js` file to modify headers that use to connect to the backend.
+See the `/app/services/api/interceptors.js` file to modify auth headers that use to request user's information.
+
+Important: The project is not based on specific backend technology, it uses two headers to connect to api but you can configure depending your backend. Aditional, when users login succesfully, a `sessionToken` is created which is sent through header to request user's information
+
 ## Environment Variables
 
 To connect with your backend, you will need to add the following environment variables to your .env file
 
-`APP_KEY`
+`APP_ID`
 
 `API_KEY`
 
