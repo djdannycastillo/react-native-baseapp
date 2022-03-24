@@ -31,7 +31,11 @@ function AppStack(props) {
             {Screens
                 .filter(screen => !screen.isHiddenMenu)
                 .map((screen, key) => (
-                    <Drawer.Screen key={key} name={screen.routeName} component={screen.component} />
+                    <Drawer.Screen 
+                        key={key} 
+                        name={screen.routeName} 
+                        component={screen.component}
+                        options={{ title: screen.name }} />
                 )
             )}
         </Drawer.Navigator>
